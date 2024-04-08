@@ -1,77 +1,81 @@
 import { useEffect } from "react";
 import { navbar_dropdown } from "../scripts/navbar_dropdown";
+import { NavBar } from "./NavBar/index";
 
-const NavBar = () => {
+const Navbar = () => {
   useEffect(() => {
     navbar_dropdown();
   }, []);
 
   return (
-    <nav id="navbar">
-      <div id="navbar_name">
-        <h1>Gabriel Nito</h1>
-      </div>
-      <div id="navbar_links">
-        <div className="navbar_link">
-          <a href="">
-            Sobre
-            <i className="fa-solid fa-chevron-down"></i>
-          </a>
-          <div className="navbar_dropdown sobre">
-            <a href="">
-              <p>Sobre mim</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus tempora aliquam sint!
-              </p>
-            </a>
-            <a href="">
-              <p>Projetos</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </a>
-            <a href="">
-              <p>Podcasts</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                sequi eveniet, asperiores ullam velit rerum necessitatibus.
-              </p>
-            </a>
-            <a href="">
-              <p>Talks</p>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </a>
-          </div>
-        </div>
-        <div className="navbar_link">
-          <a href="">Setup</a>
-          {/* <div className="navbar_dropdown setup">
-            <a href="">
-              <p>Sobre mim</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus tempora aliquam sint!
-              </p>
-            </a>
-            <a href="">
-              <p>Projetos</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </a>
-            <a href="">
-              <p>Podcasts</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                sequi eveniet, asperiores ullam velit rerum necessitatibus.
-              </p>
-            </a>
-            <a href="">
-              <p>Talks</p>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </a>
-          </div> */}
-        </div>
-      </div>
-    </nav>
+    <NavBar.Root>
+      <NavBar.Name>
+        <NavBar.NameImage src="/Logo.svg" />
+        <NavBar.NameText text="Gabriel Nito" href="/" />
+      </NavBar.Name>
+      <NavBar.Links>
+        <NavBar.Link>
+          <NavBar.LinkButton title="Sobre" dropdown />
+          <NavBar.Dropdown>
+            <NavBar.DropdownLink
+              title="Sobre Mim"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora aliquam sint!"
+              href="/"
+            />
+            <NavBar.DropdownLink
+              title="Projetos"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+              href="/"
+            />
+            <NavBar.DropdownLink
+              title="Podcasts"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                sequi eveniet, asperiores ullam velit rerum necessitatibus."
+              href="/"
+            />
+            <NavBar.DropdownLink
+              title="Talks"
+              description="Lorem ipsum dolor sit amet."
+              href="/"
+            />
+          </NavBar.Dropdown>
+        </NavBar.Link>
+        <NavBar.Link>
+          <NavBar.LinkButton title="Setup" dropdown />
+          <NavBar.Dropdown>
+            <NavBar.DropdownLink
+              title="Equipamentos"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              href="/"
+            />
+            <NavBar.DropdownLink
+              title="Stack"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+                aliquid vitae fugiat facilis eveniet excepturi."
+              href="/"
+            />
+            <NavBar.DropdownLink
+              title="Wallpapers"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing."
+              href="/"
+            />
+          </NavBar.Dropdown>
+        </NavBar.Link>
+        <NavBar.Link>
+          <NavBar.LinkButton title="Contact" href="/contact" />
+          <NavBar.LinkButtonTooltip text="Get in touch with me" />
+        </NavBar.Link>
+        <NavBar.Link>
+          <NavBar.LinkButton title="Login" href="/login" />
+          <NavBar.LinkButtonTooltip
+            text={`
+              Sign in
+              Sign Up`}
+          />
+        </NavBar.Link>
+      </NavBar.Links>
+    </NavBar.Root>
   );
 };
 
-export default NavBar;
+export default Navbar;
