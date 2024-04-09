@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { navbar_dropdown } from "../scripts/navbar_dropdown";
 import { NavBar } from "./NavBar/index";
 
-const Navbar = () => {
+const NavBar_ = () => {
   useEffect(() => {
     navbar_dropdown();
   }, []);
@@ -18,22 +18,26 @@ const Navbar = () => {
           <NavBar.LinkButton title="Sobre" dropdown />
           <NavBar.Dropdown>
             <NavBar.DropdownLink
+              icon={<i className="fa-solid fa-ellipsis"></i>}
               title="Sobre Mim"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora aliquam sint!"
               href="/"
             />
             <NavBar.DropdownLink
+              icon={<i className="fa-solid fa-wrench"></i>}
               title="Projetos"
               description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
               href="/"
             />
             <NavBar.DropdownLink
+              icon={<i className="fa-solid fa-microphone-lines"></i>}
               title="Podcasts"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
                 sequi eveniet, asperiores ullam velit rerum necessitatibus."
               href="/"
             />
             <NavBar.DropdownLink
+              icon={<i className="fa-solid fa-microphone"></i>}
               title="Talks"
               description="Lorem ipsum dolor sit amet."
               href="/"
@@ -44,17 +48,20 @@ const Navbar = () => {
           <NavBar.LinkButton title="Setup" dropdown />
           <NavBar.Dropdown>
             <NavBar.DropdownLink
+              icon={<i className="fa-regular fa-keyboard"></i>}
               title="Equipamentos"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
               href="/"
             />
             <NavBar.DropdownLink
+              icon={<i className="fa-solid fa-screwdriver-wrench"></i>}
               title="Stack"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
                 aliquid vitae fugiat facilis eveniet excepturi."
               href="/"
             />
             <NavBar.DropdownLink
+              icon={<i className="fa-solid fa-image"></i>}
               title="Wallpapers"
               description="Lorem ipsum dolor sit amet consectetur adipisicing."
               href="/"
@@ -78,4 +85,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar_;

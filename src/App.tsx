@@ -1,12 +1,13 @@
-import NavBar from "./component/NavBar";
-
+import NavBar_ from "./component/NavBar";
+import Projects_ from "./component/Projects";
 import "./css/global.sass";
 import "./css/NavBar.sass";
 
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar_ />
+      <Projects_ />
     </>
   );
 }

@@ -1,10 +1,10 @@
-import { HTMLAttributes } from "react";
+import { ReactNode } from "react";
 
 interface NavBarDropdownLinkProps {
   title: string;
   description: string;
   href: string;
-  icon?: HTMLAttributes;
+  icon?: ReactNode;
 }
 
 const NavBarDropdownLink = ({
@@ -15,11 +15,11 @@ const NavBarDropdownLink = ({
 }: NavBarDropdownLinkProps) => {
   return (
     <a href={href}>
-      <p>
-        {title}
+      <div className="navbar_dropdown_link_title">
         {icon}
-      </p>
-      <p>{description}</p>
+        <p>{title}</p>
+      </div>
+      <p className="navbar_dropdown_link_description">{description}</p>
     </a>
   );
 };
