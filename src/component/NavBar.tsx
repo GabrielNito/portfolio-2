@@ -10,7 +10,7 @@ const NavBar_ = () => {
   return (
     <NavBar.Root>
       <NavBar.Name>
-        <NavBar.NameImage src="/Logo.svg" />
+        <NavBar.NameImage src="/logo.svg" />
         <NavBar.NameText text="Gabriel Nito" href="/" />
       </NavBar.Name>
       <NavBar.Links>
@@ -48,7 +48,7 @@ const NavBar_ = () => {
           <NavBar.LinkButton title="Setup" dropdown />
           <NavBar.Dropdown>
             <NavBar.DropdownLink
-              icon={<i className="fa-regular fa-keyboard"></i>}
+              icon={<i className="fa-solid fa-keyboard"></i>}
               title="Equipamentos"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
               href="/"

@@ -5,7 +5,7 @@ interface ProjectsRootProps {
 }
 
 const ProjectsRoot = ({ children }: ProjectsRootProps) => {
-  return <div id="Projects">{children}</div>;
+  return <div id="projects">{children}</div>;
 };
 
 export default ProjectsRoot;
